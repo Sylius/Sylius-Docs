@@ -84,9 +84,22 @@ Finally, enable the bundle in the kernel...
 Importing routing configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+.. code-block:: yml
 
-    This part is not written yet.
+    sylius_blogger_category:
+        resource: @SyliusBloggerBundle/Resources/config/routing/frontend/post.yml
+        prefix: /administration/posts
+
+    sylius_blogger_backend:
+        resource: @SyliusBloggerBundle/Resources/config/routing/backend/post.yml
+        prefix: /administration/blog/posts
+
+Or in XML format: 
+
+.. code-block:: xml
+    
+    <import resource="@SyliusBloggerBundle/Resources/config/routing/frontend/post.yml" prefix="/blog/posts"/>
+    <import resource="@SyliusBloggerBundle/Resources/config/routing/backend/post.yml" prefix="/administration/blog/posts" />
 
 Container configuration
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,6 +107,13 @@ Container configuration
 .. note::
 
     This part is not written yet.
+
+
+.. code-block:: yml
+    
+    sylius_blogger:
+        driver: ORM
+        engine: twig # Or php
 
 Updating database schema
 ~~~~~~~~~~~~~~~~~~~~~~~~
