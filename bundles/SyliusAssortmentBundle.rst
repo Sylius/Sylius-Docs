@@ -17,6 +17,20 @@ This bundle uses **Pagerfanta library** and **PagerfantaBundle**.
 
 The installation guide can be found `here <https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle>`_.
 
+This bundle uses **DoctrineExtensions** and **StofDoctrineExtensionsBundle**.
+
+The installation guide can be found `here <https://github.com/stof/StofDoctrineExtensionsBundle/blob/master/Resources/doc/index.rst>`_.
+
+Configuring dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: yaml
+
+    stof_doctrine_extensions:
+        orm:
+            default:
+                tree: true
+
 Downloading the bundle
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -294,7 +308,8 @@ It's open sourced github project.
 Dependencies
 ------------
 
-This bundle uses the awesome `Pagerfanta library <https://github.com/whiteoctober/Pagerfanta>`_ and `Pagerfanta bundle <https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle>`_.
+This bundle uses the awesome `Pagerfanta library <https://github.com/whiteoctober/Pagerfanta>`_, `Pagerfanta bundle <https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle>`_,
+`DoctrineExtensions <https://github.com/l3pp4rd/DoctrineExtensions>` and `StofDoctrineExtensionsBundle <https://github.com/stof/StofDoctrineExtensionsBundle>`_.
 
 Bug tracking
 ------------
