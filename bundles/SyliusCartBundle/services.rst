@@ -59,7 +59,7 @@ This is useful, for example, when after completing an order you want to start wi
         $provider = $this->get('sylius.cart_provider'); // Implements the CartProviderInterface.
 
         $currentCart = $provider->getCart();
-        $provider->setCart($customCart);
+        $provider->setCart($currentCart);
         $provider->abandonCart();
     }
 
