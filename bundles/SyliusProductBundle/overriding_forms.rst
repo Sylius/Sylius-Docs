@@ -6,7 +6,7 @@ There are several ways to override the default forms and you have full freedoom,
 Changing the form type class
 ----------------------------
 
-To change the class behind ``sylius_product`` type or any other form from this bundle, you have to configure it in container.
+To change the class behind ``sylius_product`` type or any other form from this bundle, you have to configure it in the container.
 
 Let's assume you want to add a "price" field and remove the default "availableOn" input to the form.
 
@@ -36,7 +36,7 @@ Firstly, you have to create new ``ProductType`` class.
         }
     }
 
-Secondly, you have to configure your new class in container.
+Secondly, you have to configure your new class in the container.
 
 .. code-block:: yaml
 
@@ -57,8 +57,8 @@ That's it! The new form type class will be used. This is possible for all other 
 Using different form type
 -------------------------
 
-Thanks to flexibility of the controllers (see :doc:`SyliusResourceBundle </bundles/SyliusResourceBundle/index>`) you can use different form type per action (per route, actually).
-Below you can see usage of custom form in product create action.
+Thanks to the flexibility of the controllers (see :doc:`SyliusResourceBundle </bundles/SyliusResourceBundle/index>`) you can use a different form type per action (per route, actually).
+Below you can see usage of a custom form for the product create action.
 
 .. code-block:: yaml
 
@@ -72,4 +72,4 @@ Below you can see usage of custom form in product create action.
             _sylius:
                 form: app_product
 
-This action will use ``app_product`` form type instead of the default ``sylius_product``. If you wonder how to create this new form type, please check out the `Symfony documentation <http://symfony.com/doc/current/book/forms.html#creating-form-classes>`_.
+This action will use the ``app_product`` form type instead of the default ``sylius_product``. If you wonder how to create this new form type, please check out the `Symfony documentation <http://symfony.com/doc/current/book/forms.html#creating-form-classes>`_.
