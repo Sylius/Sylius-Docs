@@ -51,4 +51,4 @@ By default, it compares the ids, but for our example we would prefer to check th
         }
     }
 
-If user tries to add same product twice or more, it will just sum the quantities, instead of adding duplicates to cart.
+If the user tries to add the same product twice or more, it will just sum the quantities, instead of adding duplicates to the cart.
