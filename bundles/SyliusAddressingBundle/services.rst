@@ -13,7 +13,7 @@ Managers and Repositories
 You have access to following services which are used to manage and retrieve resources.
 
 This set of default services is shared across almost all Sylius bundles, but this is just a convention.
-You're interacting with them like you usually do with own entities in your project.
+You're interacting with them like you usually do with your own entities in your project.
 
 .. code-block:: php
 
@@ -39,8 +39,8 @@ You're interacting with them like you usually do with own entities in your proje
 ZoneMatcher
 -----------
 
-Since zones are usually used for tax and shipping calculations, you can use this service for getting best matching zone for given address.
-Then you can apply tax calculation for matched zone.
+Since zones are usually used for tax and shipping calculations, you can use this service for getting the best matching zone for a given address.
+Then you can apply tax calculation for that matched zone.
 
 .. code-block:: php
 
