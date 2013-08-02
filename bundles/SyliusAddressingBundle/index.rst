@@ -10,7 +10,7 @@ It's fully customizable, but the default setup should be optimal for most use ca
 There are several models inside the bundle, `Address`, `Country`, `Province`, `Zone` and `ZoneMember`.
 
 There is also a **ZoneMatcher** service.
-You'll get familiar with it in further parts of this documentation.
+You'll get familiar with it in later parts of this documentation.
 
 .. toctree::
    :maxdepth: 1
