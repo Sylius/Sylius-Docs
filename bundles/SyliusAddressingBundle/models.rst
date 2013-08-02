@@ -23,4 +23,4 @@ ZoneMember
 
 There is a base model for zone members, and for each zone type, there is a derived zone member model:
 *ZoneMemberCountry*, *ZoneMemberProvince* and *ZoneMemberZone*.
-Each of them connects *Country*, *Province* and *Zone* models with *Zone* in a collection of zone members with common *ZoneMemberInterface* interface.
+Each of them connects *Country*, *Province* and *Zone* models with *Zone* in a collection of zone members with a common *ZoneMemberInterface* interface.
