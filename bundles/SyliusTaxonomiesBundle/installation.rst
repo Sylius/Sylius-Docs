@@ -3,7 +3,7 @@ Installation
 
 We assume you're familiar with `Composer <http://packagist.org>`_, a dependency manager for PHP.
 
-Use following command to add the bundle to your `composer.json` and download package.
+Use the following command to add the bundle to your `composer.json` and download the package.
 
 .. code-block:: bash
 
@@ -13,7 +13,7 @@ Adding required bundles to the kernel
 -------------------------------------
 
 First, you need to enable the bundle inside the kernel.
-If you're not using any other Sylius bundles, you will also need to add `SyliusResourceBundle` and its dependencies to kernel.
+If you're not using any other Sylius bundles, you will also need to add `SyliusResourceBundle` and its dependencies to the kernel.
 Don't worry, everything was automatically installed via Composer.
 
 .. code-block:: php
@@ -41,7 +41,7 @@ Don't worry, everything was automatically installed via Composer.
 Creating your entities
 ----------------------
 
-Bundle provides default entities for you. There are `DefaultTaxonomy` and `DefaultTaxon` entities.
+The bundle provides default entities for you. There are `DefaultTaxonomy` and `DefaultTaxon` entities.
 So, for this example, we will use them to categorize products.
 We think that **keeping the app-specific bundle structure simple** is a good practice, so
 let's assume you have your ``DemoBundle`` registered under ``Acme\DemoBundle`` namespace.
@@ -131,7 +131,7 @@ it is handy to use `sylius_taxon_selection` form type:
         }
     }
 
-This `sylius_taxon_selection` type will add a select input field for watch taxonomy, with select option for each taxon.
+This `sylius_taxon_selection` type will add a select input field for the watch taxonomy, with a select option for each taxon.
 
 Container configuration
 -----------------------
@@ -143,7 +143,7 @@ Put this configuration inside your ``app/config/config.yml``.
     sylius_taxonomies:
         driver: doctrine/orm # Configure the doctrine orm driver used in documentation.
 
-And configure doctrine extensions which are used in taxonomies bundle:
+And configure doctrine extensions which are used in the taxonomies bundle:
 
 .. code-block:: yaml
 
