@@ -7,5 +7,7 @@ Settings system with web editing interface for Symfony2 applications.
    :numbered:
 
    installation
+   defining_settings
+   editing_settings
    templates
-   summary
+   Configuration reference <configuration>
