@@ -7,5 +7,10 @@ Flexible categorization system for Symfony2 applications.
    :numbered:
 
    installation
-   models
-   summary
+   taxonomy_and_taxon
+   controllers
+   forms
+   events
+   categorizing
+   templates
+   Configuration reference <configuration>
