@@ -7,7 +7,7 @@ Use the following command to add the bundle to your `composer.json` and download
 
 .. code-block:: bash
 
-    $ composer require sylius/resource-bundle:0.2.*
+    $ composer require sylius/resource-bundle:0.3.*
 
 Adding required bundles to the kernel
 -------------------------------------
