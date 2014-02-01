@@ -78,7 +78,7 @@ Add the following to your ``app/config/routing.yml``.
 .. code-block:: yaml
 
     sylius_product:
-        resource: @SyliusProductBundle/Resources/config/routing.yml
+        resource: "@SyliusProductBundle/Resources/config/routing.yml"
 
 Updating database schema
 ------------------------
