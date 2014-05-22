@@ -85,20 +85,7 @@ You should create a mapping file in your ``AppBundle``, put it inside the doctri
                                                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
         <entity name="App\AppBundle\Entity\Order" table="app_order">
-            <id name="id" column="id" type="integer">
-                <generator strategy="AUTO" />
-            </id>
-            <one-to-many field="items" target-entity="Sylius\Component\Order\Model\OrderItemInterface" mapped-by="order" orphan-removal="true">
-                <cascade>
-                    <cascade-all/>
-                </cascade>
-            </one-to-many>
-
-            <one-to-many field="adjustments" target-entity="Sylius\Component\Order\Model\AdjustmentInterface" mapped-by="order" orphan-removal="true">
-                <cascade>
-                    <cascade-all/>
-                </cascade>
-            </one-to-many>
+  
         </entity>
 
     </doctrine-mapping>
