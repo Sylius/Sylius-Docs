@@ -158,6 +158,15 @@ Put this configuration inside your ``app/config/config.yml``.
         classes:
             product:
                 model: App\AppBundle\Entity\Product
+                
+    sylius_money:
+        driver: doctrine/orm
+        classes:
+            exchange_rate: 
+                model: Sylius\Bundle\MoneyBundle\Model\ExchangeRate
+                controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+                repository: ~    
+                form: Sylius\Bundle\MoneyBundle\Form\Type\ExchangeRateType                 
 
 Updating database schema
 ------------------------
