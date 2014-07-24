@@ -88,7 +88,7 @@ You should create a mapping file in your ``AppBundle``, put it inside the doctri
             <id name="id" column="id" type="integer">
                 <generator strategy="AUTO" />
             </id>
-            <one-to-many field="items" target-entity="Sylius\Component\Order\Model\OrderItemInterface" mapped-by="order" orphan-removal="true">
+            <one-to-many field="items" target-entity="Sylius\Component\Core\Model\OrderItemInterface" mapped-by="order" orphan-removal="true">
                 <cascade>
                     <cascade-all/>
                 </cascade>
