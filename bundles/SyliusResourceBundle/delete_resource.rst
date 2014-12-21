@@ -47,6 +47,7 @@ For example, you want to delete the user who belongs to particular company, not 
         defaults:
             _controller: app.controller.user:deleteAction
             _sylius:
+                filterable: true
                 criteria:
                     id:      $id
                     company: $companyId

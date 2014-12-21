@@ -23,6 +23,7 @@ You need use the following syntax *$var_name*. It will try to find in the reques
         defaults:
             _controller: app.controller.user:indexAction
             _sylius:
+                filterable: true
                 criteria: {name: $name}
 
 

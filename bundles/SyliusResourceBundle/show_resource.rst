@@ -60,6 +60,7 @@ Displaying the user by id can be boring... and let's say we do not want to allow
         defaults:
             _controller: app.controller.user:showAction
             _sylius:
+                filterable: true
                 criteria:
                     username: $username
                     enabled:  true
