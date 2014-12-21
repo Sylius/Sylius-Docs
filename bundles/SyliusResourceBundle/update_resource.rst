@@ -87,6 +87,7 @@ By default, the **updateAction** will look for the resource by id. You can easil
         defaults:
             _controller: app.controller.user:updateAction
             _sylius:
+                filterable: true
                 criteria: { username: $username }
 
 Custom redirect after success

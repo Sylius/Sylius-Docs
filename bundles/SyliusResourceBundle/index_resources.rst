@@ -34,6 +34,7 @@ Just like for the **showAction**, you can override the default template and crit
         defaults:
             _controller: app.controller.user:indexAction
             _sylius:
+                filterable: true
                 criteria:
                     enabled: false
                 template: App:User:inactive.html.twig
