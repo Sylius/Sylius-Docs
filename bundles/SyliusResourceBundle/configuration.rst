@@ -18,7 +18,6 @@ In your ``app/config.yml`` (or in an imported configuration file), you need to d
         resources:
             my_app.entity_key:
                 driver: doctrine/orm
-                manager: default
                 templates: App:User
                 classes:
                     model: MyApp\Entity\EntityName
@@ -26,8 +25,7 @@ In your ``app/config.yml`` (or in an imported configuration file), you need to d
                     controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
                     repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
             my_app.other_entity_key:
-                driver: doctrine/odm
-                manager: other_manager
+                driver: doctrine/orm
                 templates: App:User
                 classes:
                     model: MyApp\Entity\OtherEntityKey
