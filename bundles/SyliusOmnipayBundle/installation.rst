@@ -33,7 +33,7 @@ First, you need to enable the bundle inside the kernel.
         $bundles = array(
             // ...
             new FOS\RestBundle\FOSRestBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new JMS\SerializerBundle\JMSSerializerBundle($this), # Optionnal, Only for API purpose
 
             new Sylius\Bundle\OmnipayBundle\SyliusOmnipayBundle()
         );
