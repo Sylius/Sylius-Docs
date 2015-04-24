@@ -35,10 +35,13 @@ PromotionSubjectInterface
 
 A ``PromotionSubjectInterface`` is the object you want to apply the promotion on. For instance, in Sylius Standard, a ``Sylius\Bundle\CoreBundle\Model\Order`` can be subject to promotions.
 
-By implementing ``PromotionSubjectInterface``, your object will have to define the following methods :
-- ``getPromotionSubjectItemTotal()`` should return the amount of your order
-- ``getPromotionSubjectItemCount()`` should return the number of items of your order
-- ``getPromotionCoupon()`` should return the coupon linked to your order. If you do not want to use coupon, simply return ``null``.
+By implementing ``PromotionSubjectInterface``, your object will have to define the following method(s) :
+
+- ``getPromotionSubjectTotal()`` (*int*) should return the amount of your order
+- ``getPromotions()`` (*Collection*) return attached promotion set
+- ``hasPromotion(PromotionInterface $promotion)`` (*bool*) check promotion set for element
+- ``addPromotion(PromotionInterface $promotion)`` (*$this*) add to promotion set
+- ``removePromotion(PromotionInterface $promotion)`` (*$this*) remove from promotion set
 
 Promotion
 ---------
