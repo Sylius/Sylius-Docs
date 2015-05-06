@@ -59,4 +59,11 @@ Now, lets register our **MetaSettingsSchema** service. Remember that we are tagg
         <tag name="sylius.settings_schema" namespace="meta" />
     </service>
 
+.. code-block:: yaml
+    services:
+        app.settings_schema.meta:
+            class: Acme\ShopBundle\Settings\MetaSettingsSchema
+            tags:
+                - { name: sylius.settings_schema, namespace: meta }
+                
 Your new settings schema is available for use.
