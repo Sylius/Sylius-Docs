@@ -23,17 +23,17 @@ In your ``app/config.yml`` (or in an imported configuration file), you need to d
                 classes:
                     model: MyApp\Entity\EntityName
                     interface: MyApp\Entity\EntityKeyInterface
-                    controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
-                    repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
+                    controller: %sylius.controller.class%
+                    repository: %sylius.orm.repository.class%
             my_app.other_entity_key:
-                driver: doctrine/odm
+                driver: doctrine/mongo-odm
                 manager: other_manager
                 templates: App:User
                 classes:
                     model: MyApp\Entity\OtherEntitName
                     interface: MyApp\Document\OtherEntityKeyInterface
-                    controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
-                    repository: Sylius\Bundle\ResourceBundle\Doctrine\ODM\DocumentRepository
+                    controller: %sylius.controller.class%
+                    repository: %sylius.mongodb_odm.repository.class%
 
 At this step, we can see what happen in the container:
 
@@ -122,7 +122,7 @@ You need to expose a semantic configuration for your bundle. The following examp
                                 ->addDefaultsIfNotSet()
                                 ->children()
                                     ->scalarNode('model')->defaultValue('MyApp\MyCustomBundle\Model\MyEntity')->end()
-                                    ->scalarNode('controller')->defaultValue('Sylius\Bundle\ResourceBundle\Controller\ResourceController')->end()
+                                    ->scalarNode('controller')->defaultValue('%sylius.controller.class%')->end()
                                     ->scalarNode('repository')->end()
                                     ->scalarNode('form')->defaultValue('MyApp\MyCustomBundle\Form\Type\MyformType')->end()
                                 ->end()
@@ -131,7 +131,7 @@ You need to expose a semantic configuration for your bundle. The following examp
                                 ->addDefaultsIfNotSet()
                                 ->children()
                                     ->scalarNode('model')->defaultValue('MyApp\MyCustomBundle\Model\MyOtherEntity')->end()
-                                    ->scalarNode('controller')->defaultValue('Sylius\Bundle\ResourceBundle\Controller\ResourceController')->end()
+                                    ->scalarNode('controller')->defaultValue('%sylius.controller.class%')->end()
                                     ->scalarNode('form')->defaultValue('MyApp\MyCustomBundle\Form\Type\MyformType')->end()
                                     // you can use an array, useful when you want to register the choice form type.
                                     ->arrayNode('form')
