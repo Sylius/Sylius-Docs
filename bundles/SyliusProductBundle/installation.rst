@@ -40,6 +40,7 @@ Don't worry, everything was automatically installed via Composer.
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Sylius\Bundle\ProductBundle\SyliusProductBundle(),
             new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
+            new Sylius\Bundle\ArchetypeBundle\SyliusArchetypeBundle(),
 
             // Other bundles...
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
@@ -60,6 +61,16 @@ Put this configuration inside your ``app/config/config.yml``.
     sylius_product:
         driver: doctrine/orm # Configure the doctrine orm driver used in the documentation.
 
+    sylius_archetype:
+        classes:
+            product:
+                subject: Sylius\Component\Core\Model\Product
+                attribute: Sylius\Component\Product\Model\Attribute
+                option: Sylius\Component\Product\Model\Option
+                archetype:
+                    model: Sylius\Component\Product\Model\Archetype
+
+
 And configure doctrine extensions which are used by the bundle.
 
 .. code-block:: yaml
@@ -70,15 +81,6 @@ And configure doctrine extensions which are used by the bundle.
                 sluggable: true
                 timestampable: true
 
-Routing configuration
----------------------
-
-Add the following to your ``app/config/routing.yml``.
-
-.. code-block:: yaml
-
-    sylius_product:
-        resource: @SyliusProductBundle/Resources/config/routing.yml
 
 Updating database schema
 ------------------------
