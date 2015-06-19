@@ -4,7 +4,7 @@ Product Attributes
 Managing Attributes
 -------------------
 
-Managing attributes happens exactly the same way like products, you have ``sylius.repository.product_attribute'`` and ``sylius.manager.product_attribute`` at your disposal.
+Managing attributes happens exactly the same way like products, you have ``sylius.repository.product_attribute`` and ``sylius.manager.product_attribute`` at your disposal.
 
 Assigning attributes to product
 -------------------------------
