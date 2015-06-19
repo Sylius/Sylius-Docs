@@ -1,16 +1,16 @@
-Product Properties
+Product Attributes
 ==================
 
-Managing Properties
+Managing Attributes
 -------------------
 
-Managing properties happens exactly the same way like products, you have ``sylius.repository.property`` and ``sylius.manager.property`` at your disposal.
+Managing attributes happens exactly the same way like products, you have ``sylius.repository.product_attribute'`` and ``sylius.manager.product_attribute`` at your disposal.
 
-Assigning properties to product
+Assigning attributes to product
 -------------------------------
 
-Value of specific Property for one of Products, happens through ProductProperty model, which holds the references to Product, Property pair and the value.
-If you want to programatically set a property value on product, use the following code.
+Value of specific Attribute for one of Products is defined through AttributeValue model, which holds the references to Product, Attribute pair and the value.
+If you want to programatically set an attribute value on product, use the following code.
 
 .. code-block:: php
 
@@ -18,18 +18,18 @@ If you want to programatically set a property value on product, use the followin
 
     public function myAction(Request $request)
     {
-        $propertyRepository = $this->container->get('sylius.repository.property');
-        $productPropertyRepository = $this->container->get('sylius.repository.product_property');
+        $attributeRepository = $this->container->get('sylius.repository.product_attribute');
+        $attributeValueRepository = $this->container->get('sylius.repository.product_attribute_value');
 
-        $property = $propertyRepository->findOneBy(array('name' => 'T-Shirt Collection'));
-        $productProperty = $productPropertyRepository->createNew();
+        $attribute = $attributeRepository->findOneBy(array('name' => 'T-Shirt Collection'));
+        $attributeValue = $attributeValueRepository->createNew();
 
-        $productProperty
-            ->setProperty($property)
+        $attributeValue
+            ->setAttribute($attribute)
             ->setValue('Summer 2013')
         ;
 
-        $product->addProperty($productProperty);
+        $product->addAttribute($attributeValue);
 
         $manager = $this->container->get('sylius.manager.product');
 
