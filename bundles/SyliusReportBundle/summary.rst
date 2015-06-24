@@ -21,7 +21,8 @@ Tests
 .. code-block:: bash
 
     $ composer install --dev --prefer-dist
-    $ phpunit
+    $ bin/phpspec run
+    $ bin/behat features/reports
 
 Working examples
 ----------------
