@@ -30,6 +30,7 @@ In your ``app/config/config.yml``, under ``sylius_rbac`` you should configure th
             app.product_manager:
                 name: Product Manager
                 permissions: app.product.update
+                description: 'Product Manager'
 
 That's it! Now you have to initialize the roles and permission in the database.
 
