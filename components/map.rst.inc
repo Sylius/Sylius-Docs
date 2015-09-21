@@ -8,6 +8,7 @@
 * :doc:`/components/Inventory/index`
 * :doc:`/components/Locale/index`
 * :doc:`/components/Mailer/index`
+* :doc:`/components/Metadata/index`
 * :doc:`/components/Order/index`
 * :doc:`/components/Payment/index`
 * :doc:`/components/Pricing/index`

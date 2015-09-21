@@ -8,6 +8,7 @@
 * :doc:`/bundles/SyliusGridBundle/index`
 * :doc:`/bundles/SyliusInventoryBundle/index`
 * :doc:`/bundles/SyliusMailerBundle/index`
+* :doc:`/bundles/SyliusMetadataBundle/index`
 * :doc:`/bundles/SyliusOmnipayBundle/index`
 * :doc:`/bundles/SyliusOrderBundle/index`
 * :doc:`/bundles/SyliusProductBundle/index`

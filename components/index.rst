@@ -19,6 +19,7 @@ The components are the foundation of the Sylius platform, but they can also be u
     Inventory/index
     Locale/index
     Mailer/index
+    Metadata/index
     Order/index
     Payment/index
     Pricing/index
