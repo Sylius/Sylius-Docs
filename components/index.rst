@@ -21,6 +21,7 @@ PHP Ecommerce Components
     Registry/index
     Report/index
     Resource/index
+    Review/index
     Sequence/index
     Shipping/index
     Taxation/index

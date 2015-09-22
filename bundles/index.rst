@@ -19,6 +19,7 @@ Symfony2 Ecommerce Bundles
     SyliusRbacBundle/index
     SyliusReportBundle/index
     SyliusResourceBundle/index
+    SyliusReviewBundle/index
     SyliusSettingsBundle/index
     SyliusShippingBundle/index
     SyliusTaxationBundle/index
