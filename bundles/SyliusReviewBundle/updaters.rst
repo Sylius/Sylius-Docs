@@ -24,5 +24,5 @@ implementation injected to updater.
 
 .. hint::
 
-    This is just an exemplary implementation, you can use ``ReviewableAverageRatingUpdaterInterface`` and implement your own updater, which will be better
-    adapted to your application needs.
+    This is just an exemplary implementation, you can use ``ReviewableAverageRatingUpdaterInterface`` and implement your own updater,
+    which will be more suitable to your application needs.

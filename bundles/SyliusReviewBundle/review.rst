@@ -19,7 +19,7 @@ used as tree key under ``sylius_review`` tag (check out `Container configuration
         $repository = $this->container->get('sylius.repository.product_review');
     }
 
-Retrieving reviews is simple as calling proper methods on the repository.
+Retrieving reviews is as simple as calling proper methods on the repository.
 
 .. code-block:: php
 
@@ -104,22 +104,22 @@ Review state machine
 States
 ######
 
-*SyliusReviewBundle* is provided with default state machine configuration for review entity. It's places in ``state-machine.yml.dist`` file, and should have
+*SyliusReviewBundle* is provided with default state machine configuration for review entity. It's placed in ``state-machine.yml.dist`` file, and should have
 ``class`` key configured to work properly.
 As default, Review object has 3 possible states:
 
 - NEW - newly created review, somebody (probably store manager/administrator) should take care of it
 - ACCEPTED - review that was accepted and can be safely displayed on its subject page
-- REJECTED - if review is somehow inappropriate, it can be rejected to never be shown to anybody
+- REJECTED - if review is somehow inappropriate, it can be rejected and never be shown to anybody
 
 .. attention::
 
-    You should notice, that in default configuration ``rejected`` review cannot ``accepted`` anymore! You can of course change it, if such a behaviour
+    You should notice, that in default configuration ``rejected`` review cannot be ``accepted`` anymore! You can of course change it, if such a behaviour
     is inadequate for your application.
 
 Callbacks
 #########
 
-*StateMachineBundle* allows you to define callbacks, that will be triggered after specific transitions. In default configuration od *SyliusReviewBundle* state machine,
+*StateMachineBundle* allows you to define callbacks, that will be triggered after specific transitions. In default configuration of *SyliusReviewBundle* state machine,
 after accepting review its subject's average rating is recalculated.
 It's achieved with running ``updateFromReview`` method on `ReviewableAverageRatingUpdater </en/latest/bundles/SyliusReviewBundle/updaters.html#reviewableaverageratingupdater>`_.

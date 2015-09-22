@@ -1,13 +1,13 @@
 Forms
 =====
 
-The bundle ships with a default review type, that should be inherited by your application's specific review type.
+The bundle is shipped with a default review type, that should be inherited by your application's specific review type.
 
 Review form
 -----------
 
-The review form type can be used wherever you need, buy using form factory. Its name depends on passed ``$subject`` parameter in constructor,
-which should correspond with your reviewable entity name.
+The review form type can be used wherever you need, by using form factory. Its name depends on passed ``$subject`` parameter in constructor,
+which should correspond to your reviewable entity name.
 
 .. code-block:: php
 
@@ -44,7 +44,7 @@ The default review form consists of following fields.
 
 .. hint::
 
-    Form ``rating`` field, describes how many points does reviewer have to rate a reviewable entity. It's default value is 5 (1 - the worst,
+    Form ``rating`` field, describes reviewer opinion about reviewable entity in one scalar. It's default range is 1-5 (1 - the worst,
     5 - the best), but it can be configured by passing chosen value with form options, under ``rating_steps`` key.
 
 .. note::

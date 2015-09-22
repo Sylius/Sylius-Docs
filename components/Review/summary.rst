@@ -6,7 +6,7 @@ Summary
 
 .. code-block:: bash
 
-    $ composer install --dev --prefer-dist
+    $ composer install --prefer-dist
     $ bin/phpspec run -fpretty --verbose
 
 Bug tracking
