@@ -62,6 +62,9 @@ Put this configuration inside your ``app/config/config.yml``.
 
     sylius_taxonomy:
         driver: doctrine/orm # Configure the doctrine orm driver used in documentation.
+        classes:
+            taxonomy: ~
+            taxon: ~ 
 
 And configure doctrine extensions which are used in the taxonomy bundle:
 
