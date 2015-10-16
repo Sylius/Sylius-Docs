@@ -6,7 +6,7 @@ Overriding Models
 Extending base Models
 ---------------------
 
-All Sylius models live in ``Sylius\Component\Xyz\Model`` namespace together with the interfaces.
+All Sylius models live in ``Sylius\Component\Core\Model\Xyz`` namespace together with the interfaces.
 As an example, for **Sylius Taxation Component** it's *TaxCategory* and *TaxRate*.
 
 Let's assume you want to add "zone" field to the Sylius tax rates.
@@ -18,7 +18,7 @@ Firstly, you need to create your own ``TaxRate`` class, which will extend the ba
     namespace Acme\Bundle\ShopBundle\Entity;
 
     use Sylius\Component\Addressing\Model\ZoneInterface;
-    use Sylius\Component\Taxation\Model\TaxRate as BaseTaxRate;
+    use Sylius\Component\Core\Model\TaxRate as BaseTaxRate;
 
     class TaxRate extends BaseTaxRate
     {
@@ -76,4 +76,4 @@ What has happened?
 * ``sylius.controller.tax_rate`` represents the controller for your new class.
 * All Doctrine relations to ``Sylius\\Component\\Taxation\\Model\\TaxRateInterface`` are using your new class as *target-entity*, you do not need to update any mappings.
 * ``TaxRateType`` form type is using your model as ``data_class``.
-* ``Sylius\\Component\\Taxation\\Model\\TaxRate`` is automatically turned into Doctrine Mapped Superclass.
+* ``Sylius\\Component\\Core\\Model\\TaxRate`` is automatically turned into Doctrine Mapped Superclass.
