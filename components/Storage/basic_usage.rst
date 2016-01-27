@@ -51,25 +51,28 @@ If it isn't specified, returns null.
 Cookie Storage
 --------------
 
-**CookieStorage** is used to manage data in the cookies'
-`ParameterBag`_ of Symfony's `Request`_ class, which needs
-to be set in the storage before making any operations on it.
+**CookieStorage** is used to manage data in the cookies' `ParameterBag`_ of
+Symfony's `Request`_ class, which is the master request fetched from the
+`RequestStack`_.
 
-.. _ParameterBag: http://api.symfony.com/2.0/Symfony/Component/HttpFoundation/ParameterBag.html
-.. _Request: http://api.symfony.com/2.0/Symfony/Component/HttpFoundation/Request.html
+.. _ParameterBag: http://api.symfony.com/2.7/Symfony/Component/HttpFoundation/ParameterBag.html
+.. _Request: http://api.symfony.com/2.7/Symfony/Component/HttpFoundation/Request.html
+.. _RequestStack: http://api.symfony.com/2.7/Symfony/Component/HttpFoundation/RequestStack.html
+
 
 .. code-block:: php
 
    <?php
 
    use Sylius\Component\Storage\CookieStorage;
-   use Symfony\Component\HttpFoundation\Request;
+   use Symfony\Component\HttpFoundation\RequestStack;
 
    $request = // The request which cookies' data you would like to manage.
 
-   $storage = new CookieStorage();
+   $requestStack = new RequestStack();
+   $requestStack->push($request);
 
-   $storage->setRequest($request);
+   $storage = new CookieStorage($requestStack);
 
 .. note::
    This service implements :ref:`component_storage_storage-interface`.
