@@ -27,7 +27,7 @@ Enabling themes
 ---------------
 
 Themes are enabled on runtime, usually by ``kernel.request`` listener, using method ``ThemeContextInterface::setTheme(ThemeInterface $theme)``
-- theme context exists as ``sylius.context.theme`` service.
+- theme context exists as ``sylius.theme.context`` service.
 
 Example of request listener enabling themes:
 
