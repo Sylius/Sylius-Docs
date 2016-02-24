@@ -26,6 +26,20 @@ First step is creation of our new renderer class. It must implement ``Sylius\Com
 
     class CustomRenderer implements RendererInterface
     {
+
+        /**
+         * @var EngineInterface
+         */
+        private $templating;
+
+        /**
+         * @param EngineInterface $templating
+         */
+        public function __construct(EngineInterface $templating)
+        {
+            $this->templating = $templating;
+        }
+
         public function render(ReportInterface $report, Data $data)
         {
             //Some operations on given data, that returns Response, which
@@ -81,7 +95,7 @@ Create renderer template
 
 To be able to display your renderer, you should create its template or templates. Luckily, your renderer templates don't have to provide all layout of report display page, only simple renderer view, which will be injected in report details template. Thanks to that, all reports have systematized display, however each renderer move us to completely different level of data perception.
 
-Default renderers' templates are placed in ``Sylius\Bundle\ReportBundle\Resources\views\`` catalogue. 
+Default renderers' templates are placed in ``Sylius\Bundle\ReportBundle\Resources\views\`` catalogue.
 
 Register custom rednerer class as service
 -------------------------------------------
