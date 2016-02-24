@@ -68,7 +68,7 @@ Now, in a separate Terminal window, call these commands:
 
 .. code-block:: bash
 
-   curl -i -X POST -H "Content-Type: application/json" -d '{"title": "Lord of The Rings", "author": "J. R. R. Tolkien", "description": "Amazing!"}' http://localhost:8000/books/
+   curl -i -X POST -H "Content-Type: application/json" -d '{"title": "Lord of The Rings", "author": "J. R. R. Tolkien", "description": "Amazing!"}' http://localhost:8000/books/new
    curl -i -X GET -H "Accept: application/json" http://localhost:8000/books/
 
 As you can guess, other CRUD actions are available through this API. But, what if you want to render HTML pages? That's easy! Update the routing configuration:
