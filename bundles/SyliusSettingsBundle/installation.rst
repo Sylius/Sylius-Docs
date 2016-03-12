@@ -50,10 +50,10 @@ This bundle also uses `DoctrineCacheBundle`. Don't worry, everything was automat
 
     Please register the bundle before *DoctrineBundle*. This is important as we use listeners which have to be processed first.
 
-Container configuration
+Container configuration (optional)
 -----------------------
 
-Put this configuration inside your ``app/config/config.yml``.
+1. Put this configuration inside your ``app/config/config.yml``.
 
 .. code-block:: yaml
 
@@ -64,6 +64,14 @@ Put this configuration inside your ``app/config/config.yml``.
         providers:
             sylius_settings: 
                 type: file_system
+
+2. Or inside ``app/config/parameters.yml`` define parameter `sylius.cache`
+
+.. code-block:: yaml
+    sylius.cache:
+        type: file_system
+
+3. Or just skip this section (default configuration will be used).
 
 Importing routing configuration
 -------------------------------
