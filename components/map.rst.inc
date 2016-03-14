@@ -20,6 +20,7 @@
 * :doc:`/components/Registry/index`
 * :doc:`/components/Report/index`
 * :doc:`/components/Resource/index`
+* :doc:`/components/Review/index`
 * :doc:`/components/Sequence/index`
 * :doc:`/components/Shipping/index`
 * :doc:`/components/Storage/index`

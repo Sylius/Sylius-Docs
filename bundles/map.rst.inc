@@ -15,6 +15,7 @@
 * :doc:`/bundles/SyliusRbacBundle/index`
 * :doc:`/bundles/SyliusReportBundle/index`
 * :doc:`/bundles/SyliusResourceBundle/index`
+* :doc:`/bundles/SyliusReviewBundle/index`
 * :doc:`/bundles/SyliusSettingsBundle/index`
 * :doc:`/bundles/SyliusShippingBundle/index`
 * :doc:`/bundles/SyliusTaxationBundle/index`

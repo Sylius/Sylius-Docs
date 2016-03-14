@@ -35,6 +35,7 @@ We recommend checking out :doc:`/components/general/index`, which will get you s
     Registry/index
     Report/index
     Resource/index
+    Review/index
     Sequence/index
     Shipping/index
     Storage/index
