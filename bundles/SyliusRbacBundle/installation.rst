@@ -70,6 +70,7 @@ And configure doctrine extensions which are used by the bundle.
         orm:
             default:
                 timestampable: true
+                tree: true
 
 Implement IdentityInterface
 ---------------------------
