@@ -42,8 +42,8 @@ First let's create a class which will keep our translatable properties:
 
 .. _book:
 
-Implementing AbstractTranslatable
----------------------------------
+Using TranslatableTrait
+-----------------------
 
 Now the following class will be actually capable of translating the **title**:
 
@@ -53,10 +53,20 @@ Now the following class will be actually capable of translating the **title**:
 
    namespace Example\Model;
 
-   use Sylius\Component\Translation\Model\AbstractTranslatable;
+   use Sylius\Component\Translation\Model\TranslatableInterface;
+   use Sylius\Component\Translation\Model\TranslatableTrait;
 
-   class Book extends AbstractTranslatable
+   class Book implements TranslatableInterface
    {
+       use TranslatableTrait {
+           __construct as translatableConstruct;
+       }
+
+       public function __construct()
+       {
+           $this->translatableConstruct();
+       }
+
        /**
         * @return string
         */
@@ -162,7 +172,7 @@ This service provides you with an easy way of managing locales.
 The first parameter set in it's constructor is the current locale and the second, fallback.
 
 In this example let's use the provider with our :ref:`Book <book>`
-class which extends the :ref:`component_translation_model_abstract-translatable`:
+class which uses the :ref:`component_translation_model_translatable-trait`:
 
 .. code-block:: php
 

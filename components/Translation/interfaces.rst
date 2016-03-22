@@ -13,7 +13,7 @@ This interface should be implemented by a model used in more than one language.
 
 .. hint::
    Although you can implement this interface in your class, it's easier to just
-   extend the :ref:`component_translation_model_abstract-translatable` class.
+   use the :ref:`component_translation_model_translatable-trait`.
 
 .. note::
    For more detailed information go to `Sylius API TranslatableInterface`_.

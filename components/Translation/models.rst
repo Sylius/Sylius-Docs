@@ -1,12 +1,12 @@
 Models
 ======
 
-.. _component_translation_model_abstract-translatable:
+.. _component_translation_model_translatable-trait:
 
-AbstractTranslatable
---------------------
+TranslatableTrait
+-----------------
 
-This class should be extended by any model which needs
+This trait should be used by any model which needs
 different presentations of its fields in various locales.
 
 +--------------------+-------------------------------------------------------------------------+
@@ -22,10 +22,10 @@ different presentations of its fields in various locales.
 +--------------------+-------------------------------------------------------------------------+
 
 .. note::
-   This model implements the :ref:`component_translation_model_translatable-interface`. |br|
-   For more detailed information go to `Sylius API AbstractTranslatable`_.
+   Models using it should implement the :ref:`component_translation_model_translatable-interface`. |br|
+   For more detailed information go to `Sylius API TranslatableTrait`_.
 
-.. _Sylius API AbstractTranslatable: http://api.sylius.org/Sylius/Component/Translation/Model/AbstractTranslatable.html
+.. _Sylius API TranslatableTrait: http://api.sylius.org/Sylius/Component/Translation/Model/TranslatableTrait.html
 
 .. _component_translation_model_abstract-translation:
 
