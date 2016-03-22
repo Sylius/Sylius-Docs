@@ -5,6 +5,25 @@ Let's say you want to send a notification to the website team when someone submi
 
 You can do it in few simple steps:
 
+Configure Your Adapter
+----------------------
+
+Sylius provide two adapters:
+  - ``sylius.email_sender.adapter.swiftmailer`` which is used by default and use ``SwiftMailer`` to send emails.
+  - and ``sylius.email_sender.adapter.sendgrid`` which use ``SendGrid`` to send emails.
+
+In order to use the ``sylius.email_sender.adapter.sendgrid`` adapter, in your ``app/config/config.yml``, under ``sylius_mailer`` you should configure the sender adapter and sendgrid api:
+
+.. code-block:: yaml
+
+    # app/config/config.yml
+
+    sylius_mailer:
+        driver: doctrine/orm
+        sender_adapter: sylius.email_sender.adapter.sendgrid
+        sendgrid_api: YOUR_SENDGRID_API_KEY
+
+
 Configure Your E-Mail
 ---------------------
 
