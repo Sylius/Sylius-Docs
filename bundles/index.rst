@@ -12,6 +12,7 @@ Symfony2 Bundles
     SyliusGridBundle/index
     SyliusInventoryBundle/index
     SyliusMailerBundle/index
+    SyliusMetadataBundle/index
     SyliusOmnipayBundle/index
     SyliusOrderBundle/index
     SyliusProductBundle/index

@@ -25,6 +25,7 @@ We recommend checking out :doc:`/components/general/index`, which will get you s
     Inventory/index
     Locale/index
     Mailer/index
+    Metadata/index
     Order/index
     Originator/index
     Payment/index
